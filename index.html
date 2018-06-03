@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 課程鏈結(https://goo.gl/hex3VR)
+    var xhr = new XMLHttpRequest();
+
+    // readyState
+    // 0 - 已經產生一個XMLHttpRequest，但還沒連結要撈的資料
+    // 1 - 用了open，還沒把資料傳送過去
+    // 2 - 偵測到send
+    // 3 - loading
+    // 4 - 撈到資料了，數據完全接受到了
+
+    // 格式：get（讀取）, post（傳送資料到伺服器）、 要讀取的網址 、 同步與非同步
+    xhr.open('get', 'https://www.thef2e.com/api/signUpTotal', true);
+    xhr.send(null);
+  </script>
+</body>
+
+</html>
