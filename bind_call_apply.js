@@ -1,18 +1,24 @@
 let person = {
   firstName: 'Luke',
   lastName: 'Lan',
-  getFullName: function() {
+  getFullName: function () {
     let fullName = this.firstName + ' ' + this.lastName;
     return fullName;
   }
 };
 
-let logName = function(loca1, loca2) {
-  console.log('Logged: ' + this.getFullName());
-  console.log('Arg: ' + loca1 + ' ' + loca2);
-}.bind(person);
-
+let logName = (loca1, loca2) => {
+  console.log(`Logged ${person.getFullName()}`);
+  console.log(`Arg: ${loca1} & ${loca2}`);
+}
 logName('Taiwan', 'Japan');
+
+// let logName = function(loca1, loca2) {
+//   console.log('Logged: ' + this.getFullName());
+//   console.log('Arg: ' + loca1 + ' ' + loca2);
+// }.bind(person);
+
+// logName('Taiwan', 'Japan');
 
 // call() 用法
 // logName.call(person,'Taiwan', 'Japan');
