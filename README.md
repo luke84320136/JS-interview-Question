@@ -4,3 +4,4 @@
 - Currying
 - this
 - Hoisting
+- bind, call, apply
