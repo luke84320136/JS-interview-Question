@@ -7,10 +7,12 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
 </head>
+<div class="message"></div>
 
 <body>
   <script>
     // 課程鏈結(https://goo.gl/hex3VR)
+    // 精神時光屋報名API(https://github.com/hexschool/TheF2E/wiki/API-DOC)
     var xhr = new XMLHttpRequest();
 
     // readyState
@@ -23,6 +25,17 @@
     // 格式：get（讀取）, post（傳送資料到伺服器）、 要讀取的網址 、 同步與非同步
     xhr.open('get', 'https://www.thef2e.com/api/signUpTotal', true);
     xhr.send(null);
+
+    xhr.onload = function () {
+      console.log(xhr.responseText);
+      var str = JSON.parse(xhr.responseText)
+      document.querySelector('.message').textContent = "報名總人數：" + str.total
+    }
+
+    // 1. 建立一個XmlHttoRequest
+    // 2. 傳送到對方伺服器要資料
+    // 3. 回傳資料到自己的瀏覽器
+    // 4. 拿到資料後，看要怎麼處理
   </script>
 </body>
 
